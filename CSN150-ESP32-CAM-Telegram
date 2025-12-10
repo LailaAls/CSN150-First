@@ -1,0 +1,53 @@
+# CSN150 Notes Repository
+### Laila Alsaedi
+
+## Purpose
+This repository contains my coursework notes, lab summaries, and project documentation for **CSN150**.
+
+## Equipment Used
+- ESP32 Board Manager
+- ESP32-CAM (AI Thinker)
+- Telegram app
+- Laptop with Arduino IDE
+- WiFi network
+
+## Tools Used
+- Arduino IDE
+- ESP32 Board Manager
+- UniversalTelegramBot library
+- ArduinoJson v6
+- Telegram BotFather
+
+
+## Steps I Followed:
+
+Installed the ESP32 board package in Arduino IDE.
+Wired ESP32-CAM to FTDI correctly (including IO0 → GND for upload).
+Installed missing libraries (UniversalTelegramBot + ArduinoJson v6).
+Created Telegram bot and received API token.
+Retrieved my own chat ID.
+Added WiFi, token, and chat ID to secrets.h.
+Selected AI Thinker ESP32-CAM in Arduino IDE.
+Uploaded successfully after fixing chip selection issue.
+Opened Telegram and tested /start, /photo, /flash.
+Photos transmitted successfully.
+Created GitHub repo and documented full build.
+
+
+## Problems / Solutions
+
+Problem: Missing library
+UniversalTelegramBot.h: No such file or directory
+Solution: Installed via ZIP from GitHub.
+
+Problem: Wrong board selected
+“This chip is ESP32, not ESP32-S3”
+Solution: Switched to AI Thinker ESP32-CAM.
+
+
+## Final Report 
+This project helped me understand how to connect hardware and software to make a working IoT device.
+I learned how to upload code to the ESP32, fix errors, and set up a Telegram bot. 
+I also learned how to make the ESP32 take pictures and send them to my phone through Telegram.
+In the end, the project worked the way it should, and the ESP32 responded to all the commands.
+This project helped me get better at using Arduino, working with networks, using IoT tools, and writing documentation.
