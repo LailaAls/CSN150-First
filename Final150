@@ -1,0 +1,171 @@
+*** Face Recognition & Object Detection using AMB82-Mini
+
+This project uses the AMB82-Mini (Ameba Pro 2) board to perform face recognition and object detection using AI.
+The system can recognize faces and detect common objects such as cars, chairs, and people in real time.
+Live video is streamed using RTSP and viewed through VLC Media Player. 
+
+*** Project Features
+
+Real-time face recognition
+
+Object detection using YOLOv7 Tiny
+
+Live video streaming with RTSP
+
+Face registration using Serial Monitor
+
+*** Hardware Used
+
+AMB82-Mini (Ameba Pro 2)
+
+Built-in camera
+
+USB cable
+
+Computer 
+
+WiFi network
+
+*** Software Used
+
+Arduino IDE
+
+AmebaNN library
+
+VLC Media Player
+
+*** AI Model Used
+
+** YOLOv7 Tiny
+
+YOLO means “You Only Look Once”.
+It looks at each image one time and quickly finds objects.
+
+YOLOv7 Tiny can detect:
+
+Cars
+
+Chairs
+
+People
+
+Tables
+
+Bottles
+
+Animals
+
+*** How It Works
+
+The camera captures live video
+
+The video frame is sent to the AI model
+
+YOLOv7 Tiny detects objects and draws boxes
+
+Faces are first shown as Unknown
+
+Faces can be registered with a name
+
+The system recognizes registered faces later
+
+*** Steps to Run the Project
+
+Open Arduino IDE
+
+Go to
+File → Examples → AmebaNN → RTSPFaceRecognition
+
+Enter your WiFi SSID and password
+
+Select the AI model using modelSelect()
+
+Task: FACE_RECOGNITION
+
+Model: DEFAULT_YOLOV7TINY
+
+Upload the code to the AMB82-Mini
+
+Press the Reset button
+
+Open Serial Monitor and note the IP address
+
+Open VLC Media Player
+
+Go to Media → Open Network Stream
+
+Enter:
+rtsp://IPaddress:554
+
+Registering a Face
+
+*** Aim the camera at one face
+
+In Serial Monitor, type:
+REG=Name
+Example:
+REG=SAM
+
+The face will now be recognized by name
+
+*** Common Problems and Solutions
+
+WiFi not connecting
+→ Check WiFi name and password
+
+Video not showing in VLC
+→ Make sure the PC and board are on the same WiFi
+
+Face shows “Unknown”
+
+*** Example
+
+Face appears as Unknown
+
+User types REG=SAM
+
+Face is saved
+
+Face is later recognized as SAM
+
+*** Code Reference
+
+Arduino Example: RTSPFaceRecognition
+
+AmebaNN Library
+
+*** What I Learned
+
+How face recognition works on embedded systems
+
+How YOLOv7 Tiny detects objects
+
+How to stream live video using RTSP
+
+How to combine AI, Arduino, and networking
+
+*** Final Report
+
+This project helped me learn how face recognition and object detection
+work using AI. I learned how to use YOLOv7 Tiny to recognize
+objects like cars, chairs, and people. I also learned how to stream live video
+and register faces. This project improved my skills in Arduino, AI, networking, and IoT.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This project helped me learn how face recognition and object detection work using AI. I learned how to use YOLOv7 Tiny to recognize objects like cars, chairs, and people. I also learned how to stream live video and register faces. This project improved my skills in Arduino, AI, networking, and IoT.Ameba Pro 2 AI Documentation→ Register the face using REG=NameClick Play
